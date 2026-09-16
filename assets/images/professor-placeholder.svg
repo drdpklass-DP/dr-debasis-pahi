@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D9488"/>
+      <stop offset="100%" style="stop-color:#D4AF37"/>
+    </linearGradient>
+    <linearGradient id="face" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5D0C5"/>
+      <stop offset="100%" style="stop-color:#E8B4A0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="#0A1628"/>
+  <circle cx="200" cy="200" r="160" fill="url(#bg)" opacity="0.15"/>
+  <circle cx="200" cy="170" r="70" fill="url(#face)"/>
+  <ellipse cx="200" cy="310" rx="90" ry="70" fill="#0F1F36"/>
+  <circle cx="200" cy="200" r="155" fill="none" stroke="#14B8A6" stroke-width="3" opacity="0.4"/>
+  <text x="200" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#D4AF37" font-weight="bold">Dr. Debasis Pahi</text>
+</svg>
