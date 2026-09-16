@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ask the Professor | Dr. Debasis Pahi — Ind-AS & IFRS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { navy:{900:'#0A1628',800:'#0F1F36',700:'#162A47'}, teal:{400:'#2DD4BF',500:'#14B8A6',600:'#0D9488'}, gold:{400:'#F0D78C',500:'#D4AF37'} }, fontFamily:{ sans:['Inter','system-ui','sans-serif'], serif:['Playfair Display','Georgia','serif'] } } } }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    #chat-messages { scrollbar-width: thin; scrollbar-color: #0D9488 #0F1F36; }
+    #chat-messages::-webkit-scrollbar { width: 6px; }
+    #chat-messages::-webkit-scrollbar-track { background: #0F1F36; }
+    #chat-messages::-webkit-scrollbar-thumb { background: #0D9488; border-radius: 3px; }
+    .msg-user { background: linear-gradient(135deg, #0D9488, #14B8A6); }
+    .msg-prof { background: #162A47; border: 1px solid rgba(255,255,255,0.06); }
+  </style>
+</head>
+<body class="bg-navy-900 text-white font-sans antialiased min-h-screen flex flex-col">
+  <div id="site-header"></div>
+
+  <main class="flex-1 pt-24 pb-8 flex flex-col">
+    <div class="max-w-4xl mx-auto px-4 w-full flex-1 flex flex-col">
+      <div class="text-center mb-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-medium mb-3">
+          <span class="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse"></span>
+          Powered by the Ind-AS & IFRS Professor Skill
+        </div>
+        <h1 class="font-serif text-3xl md:text-4xl font-bold">Ask the Professor</h1>
+        <p class="text-white/55 text-sm mt-2 max-w-lg mx-auto">Ask any question on Ind-AS or IFRS. Get clear explanations, journal entries, decision trees and red-flag guidance in the style of Dr. Debasis Pahi.</p>
+      </div>
+
+      <div class="flex-1 flex flex-col rounded-2xl bg-navy-800/60 border border-white/5 overflow-hidden min-h-[480px]">
+        <div id="chat-messages" class="flex-1 overflow-y-auto p-5 space-y-4">
+          <div class="flex gap-3">
+            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-teal-500 to-gold-500 flex items-center justify-center font-serif font-bold text-navy-900 text-sm shrink-0">DP</div>
+            <div class="msg-prof rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%] text-sm leading-relaxed">
+              <p class="font-medium text-teal-400 mb-1">Dr. Debasis Pahi</p>
+              Welcome. I am ready to help you master any Ind-AS or IFRS topic.<br><br>
+              You can ask me for:<br>
+              • Clear explanations of any standard<br>
+              • Journal entries and numerical examples<br>
+              • Decision trees and recognition criteria<br>
+              • Red flags and common misapplications<br>
+              • Differences between Ind-AS and IFRS<br><br>
+              Try a question below, or pick a suggestion.
+            </div>
+          </div>
+        </div>
+
+        <div id="suggestions" class="px-5 pb-3 flex flex-wrap gap-2">
+          <button class="suggest-btn px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/70 hover:border-teal-500/40 hover:text-teal-400 transition">Explain Ind AS 115 five-step model</button>
+          <button class="suggest-btn px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/70 hover:border-teal-500/40 hover:text-teal-400 transition">Journal entries for Ind AS 116 lessee</button>
+          <button class="suggest-btn px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/70 hover:border-teal-500/40 hover:text-teal-400 transition">Red flags in Expected Credit Loss</button>
+          <button class="suggest-btn px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white/70 hover:border-teal-500/40 hover:text-teal-400 transition">Ind AS vs IFRS major carve-outs</button>
+        </div>
+
+        <div class="p-4 border-t border-white/5 bg-navy-900/40">
+          <form id="chat-form" class="flex gap-3">
+            <input id="chat-input" type="text" placeholder="Ask about any Ind-AS or IFRS topic..." 
+              class="flex-1 px-4 py-3 rounded-xl bg-navy-900 border border-white/10 focus:border-teal-500 focus:outline-none text-sm transition" autocomplete="off">
+            <button type="submit" class="px-5 py-3 rounded-xl bg-gradient-to-r from-teal-500 to-teal-600 text-navy-900 font-semibold text-sm hover:shadow-lg hover:shadow-teal-500/20 transition shrink-0">
+              Ask
+            </button>
+          </form>
+          <p class="text-[10px] text-white/30 mt-2 text-center">This interface is designed to be connected to the Ind-AS Professor skill. Sample responses are shown for demonstration.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/common.js"></script>
+  <script src="js/ask.js"></script>
+</body>
+</html>
