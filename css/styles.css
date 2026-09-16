@@ -1,0 +1,44 @@
+/* Dr. Debasis Pahi — Premium Branding App Styles */
+
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+
+.nav-link {
+  position: relative;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s;
+}
+.nav-link:hover { color: #2DD4BF; }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #14B8A6;
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+#navbar.scrolled {
+  background: rgba(10, 22, 40, 0.97);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.35);
+}
+
+input:focus, select:focus, textarea:focus {
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15);
+}
+
+::selection {
+  background: rgba(20, 184, 166, 0.3);
+  color: white;
+}
+
+#mobile-menu {
+  animation: slideDown 0.25s ease;
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
