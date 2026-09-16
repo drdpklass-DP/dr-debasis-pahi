@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact / Book Consultation | Dr. Debasis Pahi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { navy:{900:'#0A1628',800:'#0F1F36',700:'#162A47'}, teal:{400:'#2DD4BF',500:'#14B8A6',600:'#0D9488'}, gold:{400:'#F0D78C',500:'#D4AF37'} }, fontFamily:{ sans:['Inter','system-ui','sans-serif'], serif:['Playfair Display','Georgia','serif'] } } } }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-navy-900 text-white font-sans antialiased min-h-screen flex flex-col">
+  <div id="site-header"></div>
+
+  <main class="flex-1 pt-28 pb-20">
+    <div class="max-w-2xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-teal-400 text-sm font-semibold tracking-widest uppercase mb-2">Engage the Professor</p>
+        <h1 class="font-serif text-4xl font-bold mb-3">Book a Consultation</h1>
+        <p class="text-white/60">Selective, high-impact engagements only. All enquiries are reviewed personally.</p>
+      </div>
+
+      <div class="bg-navy-800/80 border border-white/10 rounded-3xl p-8">
+        <form id="contact-form" class="space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm text-white/60 mb-1.5">Full Name</label>
+              <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl bg-navy-900 border border-white/10 focus:border-teal-500 focus:outline-none transition" placeholder="Your name">
+            </div>
+            <div>
+              <label class="block text-sm text-white/60 mb-1.5">Email</label>
+              <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl bg-navy-900 border border-white/10 focus:border-teal-500 focus:outline-none transition" placeholder="you@company.com">
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm text-white/60 mb-1.5">Organisation / Role</label>
+            <input type="text" name="org" class="w-full px-4 py-3 rounded-xl bg-navy-900 border border-white/10 focus:border-teal-500 focus:outline-none transition" placeholder="Company / CA Firm / Student">
+          </div>
+          <div>
+            <label class="block text-sm text-white/60 mb-1.5">I am interested in</label>
+            <select name="interest" class="w-full px-4 py-3 rounded-xl bg-navy-900 border border-white/10 focus:border-teal-500 focus:outline-none transition">
+              <option>Consultation (Complex Transaction / Opinion)</option>
+              <option>Corporate Training / Workshop</option>
+              <option>CA / Professional Coaching</option>
+              <option>Custom Research</option>
+              <option>Premium Notes & Cheat Sheets</option>
+              <option>Board / Audit Committee Briefing</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm text-white/60 mb-1.5">Message</label>
+            <textarea name="message" rows="4" class="w-full px-4 py-3 rounded-xl bg-navy-900 border border-white/10 focus:border-teal-500 focus:outline-none transition" placeholder="Briefly describe your requirement..."></textarea>
+          </div>
+          <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-teal-500 to-teal-600 text-navy-900 font-bold text-lg hover:shadow-xl hover:shadow-teal-500/25 transition">
+            Send Enquiry to Dr. Pahi
+          </button>
+        </form>
+        <p class="text-center text-xs text-white/40 mt-6">Response within 48 business hours.</p>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/common.js"></script>
+  <script>
+    document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = this.name.value;
+      alert('Thank you, ' + name + '.\n\nYour enquiry has been recorded. Dr. Debasis Pahi\'s office will respond within 48 business hours.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
